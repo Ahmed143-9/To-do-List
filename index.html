@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To_Do_List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="container">
+    
+    <div class="todo-app">
+        
+        <!-- Add Your Profile Button -->
+<button id="add-profile-btn">Add Your Profile</button>
+
+<!-- Update Your Profile Button (Initially Hidden) -->
+<button id="update-profile-btn" style="display:none;">Update Your Profile</button>
+
+<!-- Profile modal (pop-up) - Hidden by default -->
+<div id="profile-modal" style="display:none; position:fixed; top:50%; left:50%; transform:translate(-50%, -50%); background-color:white; padding:20px; border:1px solid black;">
+    <h3>Add Your Profile</h3>
+    <form id="profile-form" enctype="multipart/form-data">
+        <label for="profile-image">Upload your image:</label>
+        <input type="file" id="profile-image" accept="image/*" required><br><br>
+
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required><br><br>
+
+        <label for="position">Your Position:</label>
+        <input type="text" id="position" placeholder="Enter your position" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<!-- Profile preview area -->
+<div id="profile-container">
+    <img src="default.jpg" alt="" class="named" id="profile-image-preview">
+    <h3 id="profile-name">Default Name</h3>
+    <h5 id="profile-position">Position</h5>
+</div><br>
+
+       
+
+        <h2>To-Do List <img src="icon.png" alt=""></h2>
+        <div class="row">
+            <input type="text" id="input-box" placeholder="Add your Text">
+            <button  onclick="addTask()">Add</button>
+        </div>
+        <ul id="list-container">
+            <!-- <li class="checked">Task 1</li>
+            <li>Task 2</li>
+            <li>Task 3</li> -->
+        </ul>
+        <button id="clear-all">Clear All</button>
+
+    </div>
+
+ </div>   
+
+
+    <script src="script.js"></script>
+</body>
+</html>
